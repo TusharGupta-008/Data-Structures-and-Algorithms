@@ -3,11 +3,22 @@ using namespace std;
 
 int main()
 {
-  int temp[5] = {40, 50, 60, 70, 80};
+  // int temp[5] = {40, 50, 60, 70, 80};
+
+  // for (int i = 0; i < 5; i++)
+  // {
+  //   cout << "The tempratures are : " << temp[i];
+  //   cout << endl;
+  // }
+  int arr[5] = {1, 2, 3, 4, 5};
+  int sum = 0;
 
   for (int i = 0; i < 5; i++)
   {
-    cout << "The tempratures are : " << temp[i];
-    cout << endl;
+    sum += arr[i];
   }
+
+  cout << "Sum = " << sum;
+
+  return 0;
 }
