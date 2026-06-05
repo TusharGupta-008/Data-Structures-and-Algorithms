@@ -10,15 +10,29 @@ int main()
   //   cout << "The tempratures are : " << temp[i];
   //   cout << endl;
   // }
-  int arr[5] = {1, 2, 3, 4, 5};
-  int sum = 0;
+  // int arr[5] = {1, 2, 3, 4, 5};
+  // int sum = 0;
 
-  for (int i = 0; i < 5; i++)
+  // for (int i = 0; i < 5; i++)
+  // {
+  //   sum += arr[i];
+  // }
+
+  // cout << "Sum = " << sum;
+
+  int arr[5] = {10, 25, 5, 40, 18};
+
+  int largest = arr[0];
+
+  for (int i = 1; i < 5; i++)
   {
-    sum += arr[i];
+    if (arr[i] > largest)
+    {
+      largest = arr[i];
+    }
   }
 
-  cout << "Sum = " << sum;
+  cout << "Largest = " << largest;
 
   return 0;
 }
