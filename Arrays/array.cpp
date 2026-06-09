@@ -1,5 +1,22 @@
 #include <iostream>
+#include <vector>
 using namespace std;
+
+vector<int> twoSum(vector<int> &nums, int target)
+{
+  int n = nums.size();
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = i + 1; j < n; j++)
+    {
+      if (nums[i] + nums[j] == target)
+      {
+        return {i, j};
+      }
+    }
+  }
+  return {};
+}
 
 int main()
 {
@@ -20,19 +37,19 @@ int main()
 
   // cout << "Sum = " << sum;
 
-  int arr[5] = {10, 25, 5, 40, 18};
+  // int arr[5] = {10, 25, 5, 40, 18};
 
-  int largest = arr[0];
+  // int largest = arr[0];
 
-  for (int i = 1; i < 5; i++)
-  {
-    if (arr[i] > largest)
-    {
-      largest = arr[i];
-    }
-  }
+  // for (int i = 1; i < 5; i++)
+  // {
+  //   if (arr[i] > largest)
+  //   {
+  //     largest = arr[i];
+  //   }
+  // }
 
-  cout << "Largest = " << largest;
+  // cout << "Largest = " << largest;
 
-  return 0;
+  // return 0;
 }
