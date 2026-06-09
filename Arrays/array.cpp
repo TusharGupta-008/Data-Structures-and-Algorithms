@@ -2,22 +2,43 @@
 #include <vector>
 using namespace std;
 
-vector<int> twoSum(vector<int> &nums, int target)
+// vector<int> twoSum(vector<int> &nums, int target)
+// {
+//   int n = nums.size();
+//   for (int i = 0; i < n; i++)
+//   {
+//     for (int j = i + 1; j < n; j++)
+//     {
+//       if (nums[i] + nums[j] == target)
+//       {
+//         return {i, j};
+//       }
+//     }
+//   }
+//   return {};
+// }
+
+int removeDuplicates(vector<int> &arr)
 {
-  int n = nums.size();
-  for (int i = 0; i < n; i++)
+  int n = arr.size();
+  int i = 1;
+  int j = 1;
+
+  while (i < n)
   {
-    for (int j = i + 1; j < n; j++)
+    if (arr[i] == arr[i - 1])
     {
-      if (nums[i] + nums[j] == target)
-      {
-        return {i, j};
-      }
+      i++;
+    }
+    else
+    {
+      arr[j] = arr[i];
+      j++;
+      i++;
     }
   }
-  return {};
+  return j;
 }
-
 int main()
 {
   // int temp[5] = {40, 50, 60, 70, 80};
