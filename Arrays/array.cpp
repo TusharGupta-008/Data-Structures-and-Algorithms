@@ -73,4 +73,23 @@ int main()
   // cout << "Largest = " << largest;
 
   // return 0;
+
+   int arr[5] = {10, 20, 50, 40, 30};
+
+    int largest = arr[0];
+    int secondLargest = arr[0];
+
+    for(int i = 1; i < 5; i++) {
+        if(arr[i] > largest) {
+            secondLargest = largest;
+            largest = arr[i];
+        }
+        else if(arr[i] > secondLargest && arr[i] != largest) {
+            secondLargest = arr[i];
+        }
+    }
+
+    cout << "Second Largest = " << secondLargest;
+
+    return 0;
 }
